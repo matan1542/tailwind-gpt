@@ -2,6 +2,7 @@
 # OS X
 ############################
 
+out
 dist
 .DS_Store
 .AppleDouble
