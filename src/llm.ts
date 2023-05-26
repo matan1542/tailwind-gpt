@@ -25,11 +25,16 @@ export class Chatbot {
 
   async complete(prompt: string) {
     try {
-      const completion = await this.client.createCompletion({
+      const completion = await this.client.createChatCompletion({
         model: "gpt-3.5-turbo",
-        prompt,
+        messages: [
+          {
+            role: "user",
+            content: prompt
+          }
+        ]
       });
-      return completion.data.choices[0].text;
+      return completion.data.choices[0].message?.content;
     } catch (error: any) {
       if (error.response) {
         console.log(error.response.status);
