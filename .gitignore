@@ -2,6 +2,7 @@
 # OS X
 ############################
 
+dist
 .DS_Store
 .AppleDouble
 .LSOverride
