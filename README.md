@@ -1,71 +1,73 @@
-# tailwind-gpt README
+# Tailwind CSS Explorer - VS Code Extension
 
-This is the README for your extension "tailwind-gpt". After writing up a brief description, we recommend including the following sections.
+## Description
+
+Tailwind CSS Explorer is a VS Code extension that provides hover-based explanations for Tailwind CSS classes. It leverages the power of OpenAI's GPT-3.5 Turbo model to generate explanations in real-time as you hover over Tailwind CSS classes in your code.
+
+This extension helps developers understand the purpose and effects of different Tailwind CSS classes directly within their development environment, eliminating the need to refer to external documentation or websites. It enhances the developer experience and speeds up the development process by providing contextual information at your fingertips.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Real-time Explanations**: As you hover over a Tailwind CSS class, the extension quickly retrieves and displays an explanation for that class using the GPT-3.5 Turbo model. The explanations provide details on the purpose, usage, and effects of the class.
 
-For example if there is an image subfolder under your extension project workspace:
+- **Tailwind CSS Support**: The extension supports the latest version of Tailwind CSS and is regularly updated to ensure compatibility with new classes and features introduced in Tailwind CSS.
 
-\!\[feature X\]\(images/feature-x.png\)
+- **Customizable Options**: Tailwind CSS Explorer offers customizable options to adapt the extension to your preferences. You can configure the appearance of the tooltip, adjust the delay for fetching explanations, and customize the key bindings.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Installation
 
-## Requirements
+1. Open Visual Studio Code.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+2. Go to the Extensions view by clicking on the square icon in the sidebar or pressing `Ctrl+Shift+X` (`Cmd+Shift+X` on macOS).
 
-## Extension Settings
+3. Search for "Tailwind CSS Explorer" in the Extensions Marketplace.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+4. Click on the "Install" button next to the "Tailwind CSS Explorer" extension.
 
-For example:
+5. Once the installation is complete, click on the "Reload" button to activate the extension.
 
-This extension contributes the following settings:
+## Usage
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+1. Open a project that uses Tailwind CSS in Visual Studio Code.
 
-## Known Issues
+2. Hover over a Tailwind CSS class in your code.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+3. A panel will appear with the explanation for the hovered classses.
 
-## Release Notes
+4. Read the explanation to understand the purpose and effects of the classes.
 
-Users appreciate release notes as you update your extension.
+## Configuration
 
-### 1.0.0
+Tailwind CSS Explorer provides customizable options that you can modify to suit your preferences. To access the extension's configuration, follow these steps:
 
-Initial release of ...
+1. Go to the Extensions view in Visual Studio Code.
 
-### 1.0.1
+2. Click on the gear icon next to the "Tailwind CSS Explorer" extension.
 
-Fixed issue #.
+3. Click on "Extension Settings" to open the settings file for the extension.
 
-### 1.1.0
+4. Modify the API_KEY.
 
-Added features X, Y, and Z.
+5. Save the settings file.
 
----
+## Contributions and Bug Reports
 
-## Following extension guidelines
+If you encounter any issues, have suggestions for improvements, or would like to contribute to the Tailwind CSS Explorer extension, please visit the project's GitHub repository: [Link to GitHub Repository](https://github.com/matan1542/tailwind-gpt)
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+Feel free to submit bug reports, feature requests, or pull requests. Your contributions are highly appreciated.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+## Credits
 
-## Working with Markdown
+Tailwind CSS Explorer is built by [Matan Lasry](https://github.com/matan1542) and is powered by the OpenAI GPT-3.5 Turbo model. 
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## Acknowledgments
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+We would like to thank OpenAI for providing access to the GPT-3.5 Turbo model, which made this extension possible.
 
-## For more information
+Special thanks to the Tailwind CSS team for creating an amazing utility-first CSS framework that inspired this project.
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Contact
 
-**Enjoy!**
+If you have any questions, suggestions, or feedback, feel free to reach out to us:
+
+- Email: matan8380@gmail.com
