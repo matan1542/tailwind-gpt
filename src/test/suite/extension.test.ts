@@ -3,7 +3,6 @@ import * as assert from 'assert';
 import * as vscode from 'vscode';
 import { displayGPTAnswerFormated, verifyClassValidity } from '../../extension';
 import { describe, it } from 'mocha';
-import sinon from 'sinon'
 
 suite('Extension Test Suite', () => {
 	vscode.window.showInformationMessage('Start all tests.');
