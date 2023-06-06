@@ -7,7 +7,7 @@ Tailwind GPT is a VS Code extension that provides hover-based explanations for T
 This extension helps developers understand the purpose and effects of different Tailwind CSS classes directly within their development environment, eliminating the need to refer to external documentation or websites. It enhances the developer experience and speeds up the development process by providing contextual information at your fingertips.
 
 ## Example
-<iframe width="560" height="315" src="https://vimeo.com/833784415?share=copy" frameborder="0" allowfullscreen></iframe>
+![](https://github.com/matan1542/tailwind-gpt/docs/tailwind-presentation.gif)
 
 ## Features
 
