@@ -36,7 +36,10 @@ export function createPrompt(classList: string[]) {
 					The following is a classlist. Some of the classes in the class list might be 
 					a Tailwind CSS classes. Please provide explanations for each class.
 					For color classes such as tahiti that equals to '#3ab7bf' please be implicit,
-					and return in hexadecimal
+					and return in hexadecimal,
+                    and if by mistake the given prompt is not a tailwind CSS class please return an 
+                    error: {code:400, message:"None of the classes in the class list are valid Tailwind 
+                    CSS classes."}, No need to return anything except that.
 					For example, given the following class list:
 					"absolute grid pt-2"
 					Please return the following output:

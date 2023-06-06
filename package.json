@@ -62,7 +62,10 @@
     "webpack-cli": "^5.0.2"
   },
   "dependencies": {
+    "@types/chai": "^4.3.5",
     "axios": "^1.4.0",
+    "axios-mock-adapter": "^1.21.4",
+    "chai": "^4.3.7",
     "eventsource-parser": "^1.0.0",
     "openai": "^3.2.1"
   }

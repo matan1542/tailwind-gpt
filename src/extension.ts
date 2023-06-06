@@ -56,7 +56,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(hoverProvider);
 }
 
-function verifyClassValidity(hoveredWord: string, classList: string[]) {
+export function verifyClassValidity(hoveredWord: string, classList: string[]) {
 	return hoveredWord === 'className' || classList.join(' ').includes(hoveredWord)
 }
 
