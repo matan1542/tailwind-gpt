@@ -29,7 +29,6 @@ export class Chatbot implements ChatbotInterface {
     // Create an instance of Axios with the base URL, response type, and authorization header
     const instance = axios.create({
       baseURL: OPEN_AI_API_URL,
-      responseType: 'stream',
       headers: { Authorization: `Bearer ${apiToken}` }
     })
     this.client = instance;
@@ -42,7 +41,7 @@ export class Chatbot implements ChatbotInterface {
         model: 'gpt-3.5-turbo',
         messages: [{ role: 'user', content: prompt }],
         stream: true // For streaming responses
-      })
+      }, { responseType: 'stream' })
       console.log('response', response);
 
       return response.data // Return the entire response stream

@@ -3,15 +3,7 @@ import * as assert from 'assert';
 import * as vscode from 'vscode';
 import { displayGPTAnswerFormated, verifyClassValidity } from '../../extension';
 import { describe, it } from 'mocha';
-
-const panel = vscode.window.createWebviewPanel(
-	'tailWindClasses', // Unique identifier for the panel
-	'TailwindCSSClasses', // Title displayed in the UI
-	vscode.ViewColumn.One, // Desired column for the panel
-	{
-		enableScripts: true // Enable JavaScript in the webview
-	}
-);
+import sinon from 'sinon'
 
 suite('Extension Test Suite', () => {
 	vscode.window.showInformationMessage('Start all tests.');
@@ -41,11 +33,11 @@ suite('Extension Test Suite', () => {
 
 	describe('displayGPTAnswerFormated', () => {
 		it('should send formatted HTML content to the panel', () => {
+			const panel = { webview: { html: '' } }
 			const resText = '<p>Formatted HTML content</p>';
-			displayGPTAnswerFormated(resText, panel);
+			displayGPTAnswerFormated(resText, panel as any);
 			assert.strictEqual(panel.webview.html, resText);
 		});
 	});
 
-	// TODO: Add unit tests to cover chatbot behavior 
 });
