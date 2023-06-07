@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosResponse } from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import * as vscode from "vscode";
 import { getConfigName } from "./utils";
 import { OPEN_AI_API_URL } from './constants';
@@ -25,7 +25,6 @@ export class Chatbot implements ChatbotInterface {
   public client: AxiosInstance;
   constructor() {
     const apiToken = getAPIToken()
-
     // Create an instance of Axios with the base URL, response type, and authorization header
     const instance = axios.create({
       baseURL: OPEN_AI_API_URL,
@@ -42,7 +41,6 @@ export class Chatbot implements ChatbotInterface {
         messages: [{ role: 'user', content: prompt }],
         stream: true // For streaming responses
       }, { responseType: 'stream' })
-      console.log('response', response);
 
       return response.data // Return the entire response stream
     } catch (error: any) {
