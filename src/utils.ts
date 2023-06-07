@@ -31,6 +31,7 @@ export function handleStream() {
 	})
 }
 
+//Example output: `<p><strong>Raw CSS</strong></p><pre><code>{position:relative;display:flex;padding-top:24px;}</code></pre><p><strong>Explanation:</strong></p><ul><li><code>relative</code>-Sets the<code>position:relative</code>attribute on the element.</li><li><code>flex</code>-Sets the<code>display:flex</code>attribute on the element.</li><li><code>pt-6</code>-Sets the<code>padding-top:24px</code>attribute on the element (1 unit in Tailwind CSS equals 4px by default, so<code>pt-6</code>corresponds to<code>6*4px=24px</code>).</li></ul>`
 export function createPrompt(classList: string[]) {
 	return `
 					The following is a classlist. Some of the classes in the class list might be 

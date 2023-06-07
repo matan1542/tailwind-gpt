@@ -1,5 +1,4 @@
 import * as vscode from 'vscode';
-import * as beautify from 'js-beautify'
 import { Chatbot } from './llm';
 import { createPrompt, handleStream } from './utils';
 
@@ -32,7 +31,6 @@ export function activate(context: vscode.ExtensionContext) {
 				if (verifyClassValidity(hoveredWord, classList)) {
 					const prompt = createPrompt(classList)
 					// Just a simple example on valid html
-					// const value = `<p><strong>Raw CSS</strong></p><pre><code>{position:relative;display:flex;padding-top:24px;}</code></pre><p><strong>Explanation:</strong></p><ul><li><code>relative</code>-Sets the<code>position:relative</code>attribute on the element.</li><li><code>flex</code>-Sets the<code>display:flex</code>attribute on the element.</li><li><code>pt-6</code>-Sets the<code>padding-top:24px</code>attribute on the element (1 unit in Tailwind CSS equals 4px by default, so<code>pt-6</code>corresponds to<code>6*4px=24px</code>).</li></ul>`
 					const panel = vscode.window.createWebviewPanel(
 						'tailWindClasses', // Unique identifier for the panel
 						'TailwindCSSClasses', // Title displayed in the UI
@@ -56,6 +54,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(hoverProvider);
 }
 
+// Verify if the hovered content is a classname or the word itself
 export function verifyClassValidity(hoveredWord: string, classList: string[]) {
 	return hoveredWord === 'className' || classList.join(' ').includes(hoveredWord)
 }
